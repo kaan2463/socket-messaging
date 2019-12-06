@@ -1,0 +1,2 @@
+module messaging.server {
+}

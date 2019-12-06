@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Comm
+Bundle-SymbolicName: messaging.client.comm;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: messaging.client.comm.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.e4.core.di
+Bundle-RequiredExecutionEnvironment: JavaSE-12
+Automatic-Module-Name: messaging.client.comm
+Bundle-ActivationPolicy: lazy
+Export-Package: messaging.client.comm.listeners
