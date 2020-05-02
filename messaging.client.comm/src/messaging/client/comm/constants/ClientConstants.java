@@ -1,15 +1,8 @@
 package messaging.client.comm.constants;
 
 public final class ClientConstants {
-	private final static int PORT = 9000;
-	private final static String hostName = "127.0.0.1";
-
-	public static int getPort() {
-		return PORT;
-	}
-
-	public static String getHostname() {
-		return hostName;
-	}
+	public static final int PORT = 9001;
+	public static final String HOST_NAME = "127.0.0.1";
+	public static final int RECONNECT_TIME_IN_SECONDS = 5;
 
 }

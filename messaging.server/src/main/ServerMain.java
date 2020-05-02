@@ -1,11 +1,11 @@
 package main;
 
-import messaging.server.Server;
+import messaging.server.MessagingServer;
 
 public class ServerMain {
 
 	public static void main(String[] args) {
-		Server server = new Server();
+		MessagingServer server = new MessagingServer();
 		server.start();
 	}
 

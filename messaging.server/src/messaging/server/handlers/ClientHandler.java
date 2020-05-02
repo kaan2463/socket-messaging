@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import messaging.server.Server;
+import messaging.server.MessagingServer;
 
 public class ClientHandler extends Thread {
 	private InputStream is;
@@ -36,11 +36,11 @@ public class ClientHandler extends Thread {
 	}
 
 	private void removeThisInstanceFromClients() {
-		Server.getHandlers().remove(this);
+		MessagingServer.getHandlers().remove(this);
 	}
 
 	private static void sendMessageToOtherClients(String thisName, byte[] bytes) {
-		Server.getHandlers().forEach(handler -> {
+		MessagingServer.getHandlers().forEach(handler -> {
 			if (!handler.getName().equals(thisName)) {
 				try {
 					handler.getOutputStream().write(bytes);
