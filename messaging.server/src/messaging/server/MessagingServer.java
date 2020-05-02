@@ -7,9 +7,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
+import messaging.server.constants.ServerConstants;
 import messaging.server.handlers.ClientHandler;
 
-public class Server extends Thread {
+public class MessagingServer extends Thread {
 
 	private static Vector<ClientHandler> handlers = new Vector<>();
 
@@ -19,7 +20,7 @@ public class Server extends Thread {
 	}
 
 	public void startServer() {
-		try (ServerSocket serverSocket = new ServerSocket(9000)) {
+		try (ServerSocket serverSocket = new ServerSocket(ServerConstants.TCP_SERVER_PORT)) {
 			int i = 0;
 			while (true) {
 				Socket socket = serverSocket.accept();
